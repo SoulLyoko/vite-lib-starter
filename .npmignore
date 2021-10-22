@@ -1,0 +1,11 @@
+.github
+.docs
+node_modules
+public
+src
+eslintrc.js
+.gitignore
+index.html
+tsconfig.json
+vite.config.ts
+yarn.lock

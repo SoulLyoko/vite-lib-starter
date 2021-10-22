@@ -1,0 +1,48 @@
+{
+  "name": "vite-lib-starter",
+  "version": "0.0.0",
+  "description": "vite-lib-starter",
+  "author": "SoulLyoko <519052532@qq.com>",
+  "private": false,
+  "license": "MIT",
+  "keywords": [],
+  "main": "lib/index.umd.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "lint": "eslint --ext .ts,.vue .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "vue": "^3.2.20",
+    "vue-demi": "^0.11.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.3",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/compiler-sfc": "3.2.20",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.3",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.10",
+    "vitepress": "^0.20.0",
+    "vue-tsc": "^0.3.0"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
