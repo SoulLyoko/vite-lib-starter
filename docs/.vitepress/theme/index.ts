@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { App } from "vue";
-import defaultTheme from "vitepress/dist/client/theme-default";
+import defaultTheme from "vitepress/theme";
 import Demo from "../../../packages";
 import components from "../components";
 

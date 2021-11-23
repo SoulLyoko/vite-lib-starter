@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from "vue-demi";
 
 const title = ref("demo of vite-lib-starter");
 
@@ -13,5 +13,5 @@ function changeTitle() {
 </script>
 
 <script lang="ts">
-export default { name: "docs-demo" };
+export default { name: "demo-demo" };
 </script>
