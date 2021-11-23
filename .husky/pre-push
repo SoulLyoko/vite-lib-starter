@@ -17,3 +17,5 @@ done
 npm run cp
 git add docs/index.md
 git add docs/CHANGELOG.md
+
+git commit -m "switch and copy"
