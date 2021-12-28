@@ -1,7 +1,7 @@
 # Demo
 
-<docs-demo></docs-demo>
+<DemoHelloWorld></DemoHelloWorld>
 
-<code-details>
-<<< @/.vitepress/components/docs-demo/index.vue
-</code-details>
+<CodeDetails>
+<<< @/.vitepress/components/DemoHelloWorld/index.vue
+</CodeDetails>
