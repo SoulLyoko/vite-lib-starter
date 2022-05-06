@@ -9,30 +9,27 @@
   "license": "MIT",
   "main": "lib/index.umd.js",
   "types": "lib/index.d.ts",
-  "keywords": [
-    "vite",
-    "starter"
-  ],
+  "keywords": [],
   "scripts": {
-    "dev": "npm run switch3 && vite",
-    "dev2": "npm run switch2 && vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "node scripts/dev.js",
+    "dev2": "node scripts/dev.js -v2",
+    "build": "node scripts/build.js",
     "serve": "vite preview",
-    "docs:dev": "npm run switch3 && npm run cp && vitepress dev docs",
-    "docs:build": "npm run cp && vitepress build docs",
-    "docs:serve": "npm run cp && vitepress serve docs",
-    "lint": "eslint --ext .ts,.vue .",
+    "docs:dev": "node scripts/docs.js -d",
+    "docs:build": "node scripts/docs.js -b",
+    "docs:serve": "node scripts/docs.js -s",
+    "precommit": "node scripts/precommit.js",
+    "release": "node scripts/release.js",
     "prepare": "husky install",
-    "cp": "ncp README.md docs/index.md && ncp CHANGELOG.md docs/CHANGELOG.md",
-    "switch2": "yarn add vue && vue-demi-switch 2",
-    "switch3": "yarn add vue@next && vue-demi-switch 3"
+    "lint": "eslint --ext .ts,.vue .",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
-    "vue-demi": "^0.12.1"
+    "vue-demi": "^0.12.5"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.4.3",
-    "vue": "^2.0.0 || >=3.0.0"
+    "@vue/composition-api": "^1.6.0",
+    "vue": "^2.6.0 || ^3.2.0"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
@@ -40,30 +37,31 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.0",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@types/node": "^17.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
-    "@vitejs/plugin-vue": "^2.0.1",
-    "@vue/compiler-sfc": "^3.2.26",
-    "@vue/composition-api": "^1.4.3",
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "@vitejs/plugin-vue": "^2.3.2",
+    "@vue/compiler-sfc": "^3.2.33",
+    "@vue/composition-api": "^1.6.0",
     "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
+    "enquirer": "^2.3.6",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.2.0",
+    "eslint-plugin-vue": "^8.7.1",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.4",
+    "lint-staged": "^12.4.1",
     "ncp": "^2.0.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4",
-    "vite": "^2.7.7",
-    "vite-plugin-vue2": "^1.9.0",
-    "vitepress": "^0.20.10",
-    "vue": "^3.2.26",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.8",
+    "vite-plugin-vue2": "^1.9.3",
+    "vitepress": "^0.22.3",
+    "vue": "^3.2.33",
     "vue-template-compiler": "^2.6.14",
-    "vue-tsc": "^0.30.1"
+    "vue-tsc": "^0.34.11"
   },
   "lint-staged": {
     "*.{ts,vue}": [
