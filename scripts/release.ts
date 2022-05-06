@@ -1,10 +1,11 @@
-const fs = require("fs");
-const execa = require("execa");
-const { prompt } = require("enquirer");
+import fs from "fs";
+import { execSync } from "child_process";
+import { prompt } from "enquirer";
+import { copyDocs } from "./utils";
 
 async function main() {
   console.log("Choicing version...");
-  const { release } = await prompt({
+  const { release } = await prompt<{ release: string }>({
     type: "select",
     name: "release",
     message: "Select release type",
@@ -24,7 +25,7 @@ async function main() {
       break;
     default:
       {
-        const { version } = await prompt({
+        const { version } = await prompt<{ version: string }>({
           type: "input",
           name: "version",
           message: "Enter custom version"
@@ -38,13 +39,16 @@ async function main() {
   fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n");
 
   console.log("Generating changelog...");
-  await execa("yarn", ["conventional-changelog", "-p", "angular", "-i", "CHANGELOG.md", "-s"]);
+  execSync("yarn conventional-changelog -p angular -i CHANGELOG.md -s");
+  copyDocs();
 
   console.log("Committing changes...");
-  await execa("git", ["add", "package.json"]);
-  await execa("git", ["add", "CHANGELOG.md"]);
-  await execa("git", ["commit", "-m", `chore: release v${pkg.version}`]);
-  await execa("git", ["tag", `v${pkg.version}`]);
+  execSync("git add package.json");
+  execSync("git add CHANGELOG.md");
+  execSync("git add docs/CHANGELOG.md");
+  execSync("git add docs/index.md");
+  execSync(`git commit -m "chore: release v${pkg.version}"`);
+  execSync(`git tag v${pkg.version}`);
 }
 
 main();

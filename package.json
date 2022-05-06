@@ -11,18 +11,17 @@
   "types": "lib/index.d.ts",
   "keywords": [],
   "scripts": {
-    "dev": "node scripts/dev.js",
-    "dev2": "node scripts/dev.js -v2",
-    "build": "node scripts/build.js",
+    "dev": "esno scripts/dev.ts",
+    "dev2": "esno scripts/dev.ts -v2",
+    "build": "esno scripts/build.ts",
     "serve": "vite preview",
-    "docs:dev": "node scripts/docs.js -d",
-    "docs:build": "node scripts/docs.js -b",
-    "docs:serve": "node scripts/docs.js -s",
-    "precommit": "node scripts/precommit.js",
-    "release": "node scripts/release.js",
+    "docs:dev": "esno scripts/docs.ts -d",
+    "docs:build": "esno scripts/docs.ts -b",
+    "docs:serve": "esno scripts/docs.ts -s",
+    "release": "esno scripts/release.ts",
     "prepare": "husky install",
     "lint": "eslint --ext .ts,.vue .",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog:init": "esno scripts/changelog.ts -init"
   },
   "dependencies": {
     "vue-demi": "^0.12.5"
@@ -51,9 +50,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.7.1",
+    "esno": "^0.14.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.1",
-    "ncp": "^2.0.0",
     "prettier": "^2.6.2",
     "typescript": "^4.6.4",
     "vite": "^2.9.8",

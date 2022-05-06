@@ -1,11 +1,16 @@
-const path = require("path");
+import { defineConfig } from "vitepress";
+import path from "path";
 
-module.exports = {
-  alias: {
-    "@": path.join(__dirname, "../../src"),
-    "~": path.join(__dirname, "../../packages")
+export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        "@": path.join(__dirname, "../../src"),
+        "~": path.join(__dirname, "../../packages")
+      }
+    }
   },
-  base: "/vite-lib-starter",
+  base: "/vite-lib-starter/",
   lang: "zh-CN",
   title: "vite-lib-starter",
   description: "vite-lib-starter",
@@ -23,4 +28,4 @@ module.exports = {
       ]
     }
   }
-};
+});
