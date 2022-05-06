@@ -7,7 +7,7 @@
 
 <script lang="ts">
 export default {
-  name: "CodeDetails"
+  name: "code-details"
 };
 </script>
 

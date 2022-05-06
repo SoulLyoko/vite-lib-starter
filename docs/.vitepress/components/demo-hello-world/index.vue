@@ -4,6 +4,6 @@
 
 <script lang="ts">
 export default {
-  name: "DemoHelloWorld"
+  name: "demo-hello-world"
 };
 </script>

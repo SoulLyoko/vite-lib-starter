@@ -16,7 +16,7 @@ export default defineConfig(async () => {
       }
     },
     optimizeDeps: {
-      exclude: ["vue-demi"]
+      exclude: ["vue", "vue-demi"]
     },
     build: {
       lib: {

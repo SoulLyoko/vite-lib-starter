@@ -1,4 +1,4 @@
-import { h as hDemi, VNode as VNodeDemi, isVue2 } from "vue-demi";
+import { h as _h, VNode as _VNode, isVue2 } from "vue-demi";
 
 interface Options {
   attrs: Object;
@@ -8,7 +8,7 @@ interface Options {
 }
 
 /** VNode.elm in Vue2 */
-type VNode = VNodeDemi & { el?: HTMLElement; elm?: HTMLElement };
+type VNode = _VNode & { el?: HTMLElement; elm?: HTMLElement };
 
 const adaptOnsV3 = (ons: Object) => {
   if (!ons) return null;
@@ -20,7 +20,7 @@ const adaptOnsV3 = (ons: Object) => {
 };
 
 export const h = (type: string | any, options?: Options | any, chidren?: any) => {
-  if (isVue2) return hDemi(type, options, chidren) as VNode;
+  if (isVue2) return _h(type, options, chidren) as VNode;
 
   const { attrs, props, domProps, on, scopedSlots, ...extraOptions } = options ?? {};
   const ons = adaptOnsV3(on);
@@ -32,7 +32,7 @@ export const h = (type: string | any, options?: Options | any, chidren?: any) =>
     ...(ons ?? {})
   };
 
-  return hDemi(type, params, scopedSlots || chidren) as VNode;
+  return _h(type, params, scopedSlots || chidren) as VNode;
 };
 
 export const slot = (s: any, attrs?: any) => {

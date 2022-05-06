@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Demo title="vite-lib-starter"></Demo>
+    <HelloWorld></HelloWorld>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue-demi";
-import { Demo } from "~/index";
+import { HelloWorld } from "~/index";
 
 export default defineComponent({
   name: "App",
-  components: { Demo }
+  components: { HelloWorld }
 });
 </script>
 

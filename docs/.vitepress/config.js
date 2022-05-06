@@ -1,4 +1,10 @@
+const path = require("path");
+
 module.exports = {
+  alias: {
+    "@": path.join(__dirname, "../../src"),
+    "~": path.join(__dirname, "../../packages")
+  },
   base: "/vite-lib-starter",
   lang: "zh-CN",
   title: "vite-lib-starter",
@@ -12,7 +18,7 @@ module.exports = {
         { text: "开始", link: "/" },
         {
           text: "示例",
-          children: [{ text: "demo", link: "/demo/demo" }]
+          children: [{ text: "HelloWorld", link: "/hello-world/hello-world" }]
         }
       ]
     }
