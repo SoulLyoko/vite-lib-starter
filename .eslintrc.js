@@ -1,23 +1,16 @@
 module.exports = {
   root: true,
   env: {
+    es6: true,
     browser: true,
-    es2021: true,
     node: true,
     jest: true
-  },
-  globals: {
-    defineProps: "readonly",
-    defineEmits: "readonly",
-    defineExpose: "readonly"
   },
   parser: "vue-eslint-parser",
   parserOptions: {
     parser: "@typescript-eslint/parser",
-    ecmaVersion: 2021,
-    ecmaFeatures: {
-      jsx: true
-    }
+    ecmaVersion: 2020,
+    ecmaFeatures: { jsx: true }
   },
   extends: [
     "eslint:recommended",

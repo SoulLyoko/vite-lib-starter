@@ -1,6 +1,6 @@
+.history
 node_modules
 .DS_Store
-.history
 dist
 dist-ssr
 *.local
