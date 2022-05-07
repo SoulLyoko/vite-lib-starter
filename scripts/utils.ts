@@ -27,7 +27,7 @@ export function switch3() {
 
 export function copyDocs(doc?: "readme" | "changelog") {
   (doc === "readme" || !doc) &&
-    fs.copyFileSync(path.join(__dirname, "../docs/index.md"), path.join(__dirname, "../README.md"));
+    fs.copyFileSync(path.join(__dirname, "../README.md"), path.join(__dirname, "../docs/index.md"));
   (doc === "changelog" || !doc) &&
-    fs.copyFileSync(path.join(__dirname, "../docs/CHANGELOG.md"), path.join(__dirname, "../CHANGELOG.md"));
+    fs.copyFileSync(path.join(__dirname, "../CHANGELOG.md"), path.join(__dirname, "../docs/CHANGELOG.md"));
 }
