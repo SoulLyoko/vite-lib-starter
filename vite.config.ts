@@ -15,6 +15,10 @@ export default defineConfig(async () => {
         "~": path.resolve(__dirname, "packages")
       }
     },
+    test: {
+      globals: true,
+      environment: "jsdom"
+    },
     optimizeDeps: {
       exclude: ["vue", "vue-demi"]
     },

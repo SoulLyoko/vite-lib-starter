@@ -11,24 +11,21 @@ export function getVueVersion() {
 
 export function switch2() {
   if (getVueVersion() != "2") {
-    execSync("yarn add vue@2");
+    execSync("yarn add vue@2.6.14 -D");
+    execSync("yarn add @vue/test-utils@1.3.0 -D");
     execSync("vue-demi-switch 2");
   }
 }
 
 export function switch3() {
   if (getVueVersion() != "3") {
-    execSync("yarn add vue");
+    execSync("yarn add vue -D");
+    execSync("yarn add @vue/test-utils -D");
     execSync("vue-demi-switch 3");
   }
 }
 
 export function copyDocs({ readme = true, changelog = true } = {}) {
-  readme &&
-    fs.writeFileSync(path.join(__dirname, "../docs/index.md"), fs.readFileSync(path.join(__dirname, "../README.md")));
-  changelog &&
-    fs.writeFileSync(
-      path.join(__dirname, "../docs/CHANGELOG.md"),
-      fs.readFileSync(path.join(__dirname, "../CHANGELOG.md"))
-    );
+  readme && fs.copyFileSync(path.join(__dirname, "../docs/index.md"), path.join(__dirname, "../README.md"));
+  changelog && fs.copyFileSync(path.join(__dirname, "../docs/CHANGELOG.md"), path.join(__dirname, "../CHANGELOG.md"));
 }
