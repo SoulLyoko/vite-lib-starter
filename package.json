@@ -11,8 +11,7 @@
   "types": "lib/index.d.ts",
   "keywords": [],
   "scripts": {
-    "dev": "yarn dev:3",
-    "dev:3": "yarn switch:3 && vite",
+    "dev": "yarn switch:3 && vite",
     "dev:2": "yarn switch:2 && vite",
     "build": "yarn switch:3 && vite build",
     "serve": "yarn switch:3 && vite preview",
@@ -26,6 +25,7 @@
     "switch:2": "esno scripts/switch.ts 2",
     "switch:3": "esno scripts/switch.ts 3",
     "release": "esno scripts/release.ts",
+    "precommit": "esno scripts/precommit.ts",
     "vtsc": "vue-tsc --noEmit",
     "prepare": "husky install",
     "lint": "eslint --ext .ts,.vue .",
