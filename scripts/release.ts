@@ -48,6 +48,7 @@ async function main() {
   execSync("git add docs/CHANGELOG.md");
   execSync(`git commit -m "chore: release v${pkg.version}"`);
   execSync(`git tag v${pkg.version}`);
+  execSync(`git push origin --tags v${pkg.version}`);
 }
 
 main();
