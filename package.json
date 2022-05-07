@@ -14,7 +14,7 @@
     "dev": "yarn dev:3",
     "dev:3": "yarn switch:3 && vite",
     "dev:2": "yarn switch:2 && vite",
-    "build": "yarn switch:3 && yarn vtsc && vite build",
+    "build": "yarn switch:3 && vite build",
     "serve": "yarn switch:3 && vite preview",
     "docs:dev": "yarn switch:3 && vitepress dev docs",
     "docs:build": "yarn switch:3 && vitepress build docs",

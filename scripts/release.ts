@@ -40,13 +40,12 @@ async function main() {
 
   console.log("Generating changelog...");
   execSync("yarn conventional-changelog -p angular -i CHANGELOG.md -s");
-  copyDocs();
+  copyDocs("changelog");
 
   console.log("Committing changes...");
   execSync("git add package.json");
   execSync("git add CHANGELOG.md");
   execSync("git add docs/CHANGELOG.md");
-  execSync("git add docs/index.md");
   execSync(`git commit -m "chore: release v${pkg.version}"`);
   execSync(`git tag v${pkg.version}`);
 }
