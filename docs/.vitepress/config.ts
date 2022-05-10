@@ -19,11 +19,14 @@ export default defineConfig({
     nav: [],
     sidebar: {
       "/": [
-        { text: "更新日志", link: "/CHANGELOG" },
-        { text: "开始", link: "/" },
+        { text: "CHANGELOG", link: "/CHANGELOG" },
+        { text: "Quick Start", link: "/" },
         {
-          text: "示例",
-          children: [{ text: "HelloWorld", link: "/hello-world/hello-world" }]
+          text: "Examples",
+          children: [
+            { text: "Input", link: "/examples/input/index" },
+            { text: "Button", link: "/examples/button/index" }
+          ]
         }
       ]
     }

@@ -1,4 +1,4 @@
-import { App } from "vue-demi";
+import type { App } from "vue-demi";
 
 const components = import.meta.globEager("./**/*.vue");
 

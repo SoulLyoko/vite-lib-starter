@@ -1,6 +1,6 @@
 <template>
   <details class="code-details">
-    <summary>查看代码</summary>
+    <summary>View source</summary>
     <slot></slot>
   </details>
 </template>
