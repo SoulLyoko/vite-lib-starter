@@ -27,8 +27,10 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/ban-types": 0,
     "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
     "vue/require-render-return": 0,
     "vue/require-explicit-emits": 0,
-    "vue/require-default-prop": 0
+    "vue/require-default-prop": 0,
+    "vue/multi-word-component-names": 0
   }
 };

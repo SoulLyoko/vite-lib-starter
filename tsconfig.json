@@ -1,33 +1,13 @@
 {
+  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "lib": ["esnext", "dom"],
+    "lib": ["es2017", "dom"],
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["packages/*"]
     },
-    "types": ["vitest", "vitest/globals"]
+    "types": ["vitest/globals"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.vue",
-    "packages/**/*.ts",
-    "packages/**/*.d.ts",
-    "packages/**/*.vue",
-    "docs/.vitepress/**/*.ts",
-    "docs/.vitepress/**/*.d.ts",
-    "docs/.vitepress/**/*.vue",
-    "test/**/*.ts",
-    "test/**/*.test.ts"
-  ]
+  "include": ["packages", "docs/.vitepress/**/*", "src"]
 }

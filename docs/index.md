@@ -1,8 +1,9 @@
-<center> A template for building Vue components library
-
-<a href="https://soullyoko.github.io/vite-lib-starter/">Docs</a>
-
-</center>
+<div align="center">
+<h3>ViteLibStarter</h3>
+<span>A template for building Vue components library</span> 
+<br>
+<a  href="https://soullyoko.github.io/vite-lib-starter/">Docs</a>
+</div>
 
 # Directory
 
@@ -28,9 +29,9 @@
 
 - Use this template
 - Global rename `vite-lib-starter` and `ViteLibStarter` to your own library name.
-- Generate your github personal access token on https://github.com/settings/tokens (pass it if you already have)
+- Generate your github personal access token on https://github.com/settings/tokens (skip if you already have)
 - Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to [deploy.yml](./.github/workflows/deploy.yml#L21)) to your repo `Setting>Secrets>Actions`
-- Generate your npm access token (pass it if you already have)
+- Generate your npm access token (skip if you already have)
 - Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to [publish.yml](./.github/workflows/publish.yml#L21)) to your repo `Setting>Secrets>Actions`
 
 # Usage
@@ -50,17 +51,25 @@ Other commands
 yarn dev # dev on vue3
 yarn dev:2 # dev on vue2
 yarn docs:dev # dev docs
+yarn docs:copy # copy README.md and CHANGELOG.md to docs
 yarn test # test on vue3 in watch mode
-yarn test:2 # test on vue2 with single run
-yarn test:3 # test on vue3 with single run
-yarn test:all # test both of vue2 and vue3 with single run
+yarn test:2 # test on vue2 without watch
+yarn test:3 # test on vue3 without watch
+yarn test:all # test both of vue2 and vue3 without watch
+yarn test:coverage # use c8 for coverage
 yarn switch:2 # switch packeges and vue-demi to vue2
 yarn switch:3 # switch packeges and vue-demi to vue3
 yarn release # release by choicing a version
-yarn changelog:init # init changelog
+yarn typecheck # run vue-tsc with noEmit
 ```
 
-To support Vue2, do not use SFC(.vue) files, just use the function `h()` (encapsulated by h-demi) in `.ts` files, example: [hello-world](./packages/components/hello-world/index.ts)
+### Support Vue2 and Vue3
+
+[example](./packages/components/hello-world/index.ts)
+
+Do not use SFC(.vue) files, just use the function `h()` (encapsulated by h-demi) in `.ts` files, no jsx of course.
+
+Don't forget to add `value`,`modelValue` and `input`,`update:modelValue` to props and emits options at the same time
 
 ## Build
 
