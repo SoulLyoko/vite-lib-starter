@@ -1,17 +1,44 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld></HelloWorld>
+    <h3 v-if="userName">
+      Hi,{{ userName }}!
+      <br />
+      <VButton @click="onBack">Back</VButton>
+    </h3>
+    <div v-else>
+      <VInput v-model="inputValue" placeholder="Input your name"></VInput>
+      <VButton type="primary" @click="onConfirm">Confirm</VButton>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue-demi";
-import { HelloWorld } from "~/index";
+import { defineComponent, ref } from "vue-demi";
 
 export default defineComponent({
   name: "App",
-  components: { HelloWorld }
+  setup() {
+    const inputValue = ref("");
+    const userName = ref("");
+
+    function onConfirm() {
+      if (!inputValue.value) {
+        return alert("Please enter your name");
+      }
+      userName.value = inputValue.value;
+    }
+    function onBack() {
+      userName.value = "";
+    }
+
+    return {
+      inputValue,
+      userName,
+      onConfirm,
+      onBack
+    };
+  }
 });
 </script>
 
