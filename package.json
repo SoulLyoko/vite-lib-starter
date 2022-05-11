@@ -7,7 +7,12 @@
   "homepage": "https://github.com/SoulLyoko/vite-lib-starter#readme",
   "private": false,
   "license": "MIT",
+  "files": [
+    "lib",
+    "global.d.ts"
+  ],
   "main": "lib/index.umd.js",
+  "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "keywords": [
     "vite",
@@ -20,10 +25,9 @@
     "build": "yarn switch:3 && vite build && yarn build:types",
     "build:types": "vue-tsc --project tsconfig.d.json --declaration --emitDeclarationOnly --outDir lib",
     "serve": "yarn switch:3 && vite preview",
-    "docs:dev": "yarn switch:3 && yarn docs:copy && vitepress dev packages",
-    "docs:build": "yarn switch:3 && yarn docs:copy && vitepress build packages",
-    "docs:serve": "yarn switch:3 && yarn docs:copy && vitepress serve packages",
-    "docs:copy": "esno scripts/docs-copy.ts",
+    "docs:dev": "yarn switch:3 && vitepress dev packages",
+    "docs:build": "yarn switch:3 && vitepress build packages",
+    "docs:serve": "yarn switch:3 && vitepress serve packages",
     "test": "vitest",
     "test:2": "yarn switch:2 && vitest run",
     "test:3": "yarn switch:3 && vitest run",
@@ -32,9 +36,9 @@
     "switch:2": "esno scripts/switch.ts 2",
     "switch:3": "esno scripts/switch.ts 3",
     "release": "esno scripts/release.ts",
-    "precommit": "esno scripts/precommit.ts",
     "typecheck": "vue-tsc --noEmit",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "ci": "yarn typecheck && yarn test:all && yarn build && yarn docs:build",
     "prepare": "husky install",
     "lint": "eslint --ext .ts,.vue ."
   },

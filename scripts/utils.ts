@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import { execSync } from "child_process";
 import packageJson from "../package.json";
 
@@ -23,10 +21,4 @@ export function switch3() {
     execSync("yarn add @vue/test-utils -D");
     execSync("vue-demi-switch 3");
   }
-}
-
-export function copyDocs() {
-  // Uncomment It
-  // fs.copyFileSync(path.join(__dirname, "../README.md"), path.join(__dirname, "../packages/index.md"));
-  fs.copyFileSync(path.join(__dirname, "../CHANGELOG.md"), path.join(__dirname, "../packages/CHANGELOG.md"));
 }

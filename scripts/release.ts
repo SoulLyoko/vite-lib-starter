@@ -1,7 +1,6 @@
 import fs from "fs";
 import { execSync } from "child_process";
 import { prompt } from "enquirer";
-import { copyDocs } from "./utils";
 
 async function main() {
   console.log("Choicing version...");
@@ -40,13 +39,10 @@ async function main() {
 
   console.log("Generating changelog...");
   execSync("yarn changelog");
-  copyDocs();
 
   console.log("Committing changes...");
   execSync("git add package.json");
   execSync("git add CHANGELOG.md");
-  execSync("git add packages/CHANGELOG.md");
-  execSync("git add packages/index.md");
   execSync(`git commit -m "chore: release v${pkg.version}"`);
   execSync(`git tag v${pkg.version}`);
   // execSync(`git push`);
