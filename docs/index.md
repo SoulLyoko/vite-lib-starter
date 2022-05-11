@@ -21,6 +21,7 @@ yarn add vite-lib-starter
 import { createApp } from "vue";
 import App from "./App.vue";
 import LibStarter from "vite-lib-starter";
+import "vite-lib-starter/lib/style.css";
 
 const app = createApp(App);
 app.use(LibStarter);
