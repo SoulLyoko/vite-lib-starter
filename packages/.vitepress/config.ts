@@ -8,6 +8,7 @@ export default defineConfig({
   title: "vite-lib-starter",
   description: "vite-lib-starter",
   themeConfig: {
+    docsDir: "packages",
     repo: "SoulLyoko/vite-lib-starter",
     nav: [],
     sidebar: {
@@ -17,8 +18,8 @@ export default defineConfig({
         {
           text: "Components",
           children: [
-            { text: "Button", link: "/components/button/index" },
-            { text: "Input", link: "/components/input/index" }
+            { text: "Button", link: "/components/button/demo/index" },
+            { text: "Input", link: "/components/input/demo/index" }
           ]
         }
       ]
@@ -29,7 +30,8 @@ export default defineConfig({
     resolve: {
       alias: {
         "@": path.join(__dirname, "../../src"),
-        "~": path.join(__dirname, "../../packages")
+        "~": path.join(__dirname, "../../packages"),
+        "vite-lib-starter": path.resolve(__dirname, "../../packages")
       }
     }
   }

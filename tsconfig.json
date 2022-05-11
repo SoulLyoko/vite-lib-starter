@@ -5,9 +5,10 @@
     "lib": ["es2017", "dom"],
     "paths": {
       "@/*": ["src/*"],
-      "~/*": ["packages/*"]
+      "~/*": ["packages/*"],
+      "vite-lib-starter": ["./packages"]
     },
     "types": ["vitest/globals"]
   },
-  "include": ["packages", "docs/.vitepress/**/*", "src"]
+  "include": ["packages", "packages/.vitepress/**/*", "src"]
 }

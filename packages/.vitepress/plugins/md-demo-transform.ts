@@ -5,7 +5,6 @@ const MATCHER = /:::\s*demo\s*(.*)\s*:::/;
 const useMatcher = (flags?: string) => new RegExp(MATCHER, flags);
 
 function parseComponent(match: string, id: string) {
-  // const [componentPath] = match.split(/\s/).filter(e => e && e !== ":::" && e !== "demo");
   const [m, componentPath] = match.match(useMatcher()) ?? [];
   const componentName = path.basename(componentPath);
   let sourcePath = path.join(id.substring(0, id.lastIndexOf("/")), componentPath);

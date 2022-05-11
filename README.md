@@ -10,11 +10,9 @@
 ```bash
 ├── .github         # github workflows
 ├── .husky          # git hooks
-├── docs            # vitepress docs
 ├── packages        # lib source
 ├── scripts         # command scripts
 ├── src             # dev source
-└── test            # unit tests
 ```
 
 # Features
@@ -61,6 +59,7 @@ yarn switch:2 # switch packeges and vue-demi to vue2
 yarn switch:3 # switch packeges and vue-demi to vue3
 yarn release # release by choicing a version
 yarn typecheck # run vue-tsc with noEmit
+yarn changelog # generate changelog
 ```
 
 ### Support Vue2 and Vue3

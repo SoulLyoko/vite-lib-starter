@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import { VButton } from ".";
+import { VButton } from "..";
 
 describe("VButton", () => {
   it("mount", () => {

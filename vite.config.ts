@@ -12,7 +12,8 @@ export default defineConfig(async () => {
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
-        "~": path.resolve(__dirname, "packages")
+        "~": path.resolve(__dirname, "packages"),
+        "vite-lib-starter": path.resolve(__dirname, "packages")
       }
     },
     test: {

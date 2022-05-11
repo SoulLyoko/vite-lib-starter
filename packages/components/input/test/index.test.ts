@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import { VInput } from ".";
+import { VInput } from "..";
 
 describe("VInput", () => {
   it("mount", () => {
