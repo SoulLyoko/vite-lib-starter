@@ -1,3 +1,17 @@
+# [0.3.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.2.0...v0.3.0) (2022-05-11)
+
+
+### Bug Fixes
+
+* remove script `docs:copy` ([7d23a7e](https://github.com/SoulLyoko/vite-lib-starter/commit/7d23a7ec557843510f1f5117065e75dfd86c0525))
+
+
+### Features
+
+* vitepress markdown component ([55b0024](https://github.com/SoulLyoko/vite-lib-starter/commit/55b0024c5db9364809770773f8b6dda9b574a36a))
+
+
+
 # [0.2.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.1.0...v0.2.0) (2022-05-11)
 
 
