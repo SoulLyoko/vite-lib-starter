@@ -13,9 +13,8 @@
   "scripts": {
     "dev": "yarn switch:3 && vite",
     "dev:2": "yarn switch:2 && vite",
-    "build": "yarn switch:3 && vite build && yarn build:types && yarn build:globals",
+    "build": "yarn switch:3 && vite build && yarn build:types",
     "build:types": "vue-tsc --project tsconfig.d.json --declaration --emitDeclarationOnly --outDir lib",
-    "build:globals": "esno scripts/globals.ts",
     "serve": "yarn switch:3 && vite preview",
     "docs:dev": "yarn switch:3 && yarn docs:copy && vitepress dev docs",
     "docs:build": "yarn switch:3 && yarn docs:copy && vitepress build docs",
