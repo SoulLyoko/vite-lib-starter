@@ -2,6 +2,20 @@ import { defineConfig } from "vitepress";
 import path from "path";
 import { mdDemoTransform } from "./plugins/md-demo-transform";
 
+const Guide = [
+  { text: "Start", link: "/guide/start" },
+  { text: "Changelog", link: "/guide/changelog" }
+];
+const Components = [
+  {
+    text: "Components",
+    children: [
+      { text: "Button", link: "/components/button/demo/index" },
+      { text: "Input", link: "/components/input/demo/index" }
+    ]
+  }
+];
+
 export default defineConfig({
   base: "/vite-lib-starter/",
   lang: "zh-CN",
@@ -10,19 +24,13 @@ export default defineConfig({
   themeConfig: {
     docsDir: "packages",
     repo: "SoulLyoko/vite-lib-starter",
-    nav: [],
+    nav: [
+      { text: "Guide", link: Guide[0].link },
+      { text: "Components", link: Components[0].children[0].link }
+    ],
     sidebar: {
-      "/": [
-        { text: "CHANGELOG", link: "/CHANGELOG" },
-        { text: "Quick Start", link: "/" },
-        {
-          text: "Components",
-          children: [
-            { text: "Button", link: "/components/button/demo/index" },
-            { text: "Input", link: "/components/input/demo/index" }
-          ]
-        }
-      ]
+      "/guide": Guide,
+      "/components": Components
     }
   },
   vite: {

@@ -28,9 +28,9 @@
 - Use this template
 - Global rename `vite-lib-starter` and `ViteLibStarter` to your own library name.
 - Generate your github personal access token on https://github.com/settings/tokens (skip if you already have)
-- Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to [deploy.yml](.github/workflows/deploy.yml#L21)) to your repo `Setting>Secrets>Actions`
+- Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/deploy.yml#L21` to your repo `Setting>Secrets>Actions`
 - Generate your npm access token (skip if you already have)
-- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to [publish.yml](.github/workflows/publish.yml#L21)) to your repo `Setting>Secrets>Actions`
+- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/publish.yml#L21` to your repo `Setting>Secrets>Actions`
 
 # Usage
 
@@ -49,7 +49,6 @@ Other commands
 yarn dev # dev on vue3
 yarn dev:2 # dev on vue2
 yarn docs:dev # dev docs
-yarn docs:copy # copy README.md and CHANGELOG.md to docs
 yarn test # test on vue3 in watch mode
 yarn test:2 # test on vue2 without watch
 yarn test:3 # test on vue3 without watch
@@ -60,11 +59,12 @@ yarn switch:3 # switch packeges and vue-demi to vue3
 yarn release # release by choicing a version
 yarn typecheck # run vue-tsc with noEmit
 yarn changelog # generate changelog
+yarn ci # ci
 ```
 
 ### Support Vue2 and Vue3
 
-[Examples](packages/components)
+Examples: see `packages/components`
 
 Do not use SFC(.vue) files, just use the function `h()` (encapsulated by h-demi) in `.ts` files, no jsx of course.
 
@@ -78,7 +78,7 @@ yarn build
 
 ## Publish
 
-Automatic publish to npm using [publish.yml](.github/workflows/publish.yml), after running `yarn release` and push to origin.
+Automatic publish to npm using `.github/workflows/publish.yml`, after running `yarn release` and push to origin.
 
 If you want to publish manually, remove `publish.yml` and run
 
@@ -90,10 +90,10 @@ npm publish
 
 ## Deploy docs
 
-Automatic deployment to gh-pages using [deploy.yml](.github/workflows/deploy.yml).
+Automatic deployment to gh-pages using `.github/workflows/deploy.yml`.
 
 If you want to deploy manually, remove `deploy.yml` and run
 
 ```bash
-yarn docs:build # docs/.vitepress/dist
+yarn docs:build # packages/.vitepress/dist
 ```
