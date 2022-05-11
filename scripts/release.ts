@@ -39,7 +39,7 @@ async function main() {
   fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n");
 
   console.log("Generating changelog...");
-  execSync("yarn conventional-changelog -p angular -i CHANGELOG.md -s");
+  execSync("yarn changelog");
   copyDocs();
 
   console.log("Committing changes...");
@@ -49,6 +49,7 @@ async function main() {
   execSync("git add docs/index.md");
   execSync(`git commit -m "chore: release v${pkg.version}"`);
   execSync(`git tag v${pkg.version}`);
+  // execSync(`git push`);
   execSync(`git push origin --tags v${pkg.version}`);
 }
 
