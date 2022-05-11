@@ -18,10 +18,10 @@ async function main() {
       pkg.version = [major, minor, Number(patch) + 1].join(".");
       break;
     case "minor":
-      pkg.version = [major, Number(minor) + 1, patch].join(".");
+      pkg.version = [major, Number(minor) + 1, 0].join(".");
       break;
     case "major":
-      pkg.version = [Number(major) + 1, minor, patch].join(".");
+      pkg.version = [Number(major) + 1, 0, 0].join(".");
       break;
     default:
       {

@@ -9,7 +9,11 @@
   "license": "MIT",
   "main": "lib/index.umd.js",
   "types": "lib/index.d.ts",
-  "keywords": [],
+  "keywords": [
+    "vite",
+    "lib",
+    "starter"
+  ],
   "scripts": {
     "dev": "yarn switch:3 && vite",
     "dev:2": "yarn switch:2 && vite",
