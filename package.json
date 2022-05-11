@@ -73,6 +73,7 @@
     "vite": "^2.9.8",
     "vite-plugin-vue2": "^2.0.0",
     "vitepress": "^0.22.4",
+    "vitest": "^0.12.4",
     "vue": "^3.2.33",
     "vue-template-compiler": "^2.6.14",
     "vue-tsc": "^0.34.12"
