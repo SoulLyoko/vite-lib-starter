@@ -26,6 +26,7 @@ export function switch3() {
 }
 
 export function copyDocs() {
-  fs.copyFileSync(path.join(__dirname, "../README.md"), path.join(__dirname, "../docs/index.md"));
+  // Uncomment It
+  // fs.copyFileSync(path.join(__dirname, "../README.md"), path.join(__dirname, "../docs/index.md"));
   fs.copyFileSync(path.join(__dirname, "../CHANGELOG.md"), path.join(__dirname, "../docs/CHANGELOG.md"));
 }

@@ -30,9 +30,9 @@
 - Use this template
 - Global rename `vite-lib-starter` and `ViteLibStarter` to your own library name.
 - Generate your github personal access token on https://github.com/settings/tokens (skip if you already have)
-- Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to [deploy.yml](./.github/workflows/deploy.yml#L21)) to your repo `Setting>Secrets>Actions`
+- Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to [deploy.yml](.github/workflows/deploy.yml#L21)) to your repo `Setting>Secrets>Actions`
 - Generate your npm access token (skip if you already have)
-- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to [publish.yml](./.github/workflows/publish.yml#L21)) to your repo `Setting>Secrets>Actions`
+- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to [publish.yml](.github/workflows/publish.yml#L21)) to your repo `Setting>Secrets>Actions`
 
 # Usage
 
@@ -65,7 +65,7 @@ yarn typecheck # run vue-tsc with noEmit
 
 ### Support Vue2 and Vue3
 
-[example](./packages/components/hello-world/index.ts)
+[Examples](packages/components)
 
 Do not use SFC(.vue) files, just use the function `h()` (encapsulated by h-demi) in `.ts` files, no jsx of course.
 
@@ -79,7 +79,7 @@ yarn build
 
 ## Publish
 
-Automatic publish to npm using [publish.yml](./.github/workflows/publish.yml), after running `yarn release` and push to origin.
+Automatic publish to npm using [publish.yml](.github/workflows/publish.yml), after running `yarn release` and push to origin.
 
 If you want to publish manually, remove `publish.yml` and run
 
@@ -91,7 +91,7 @@ npm publish
 
 ## Deploy docs
 
-Automatic deployment to gh-pages using [deploy.yml](./.github/workflows/deploy.yml).
+Automatic deployment to gh-pages using [deploy.yml](.github/workflows/deploy.yml).
 
 If you want to deploy manually, remove `deploy.yml` and run
 

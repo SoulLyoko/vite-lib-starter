@@ -1,15 +1,8 @@
 import { defineConfig } from "vitepress";
 import path from "path";
+import { mdDemoTransform } from "./plugins/md-demo-transform";
 
 export default defineConfig({
-  vite: {
-    resolve: {
-      alias: {
-        "@": path.join(__dirname, "../../src"),
-        "~": path.join(__dirname, "../../packages")
-      }
-    }
-  },
   base: "/vite-lib-starter/",
   lang: "zh-CN",
   title: "vite-lib-starter",
@@ -22,13 +15,22 @@ export default defineConfig({
         { text: "CHANGELOG", link: "/CHANGELOG" },
         { text: "Quick Start", link: "/" },
         {
-          text: "Examples",
+          text: "Components",
           children: [
-            { text: "Input", link: "/examples/input/index" },
-            { text: "Button", link: "/examples/button/index" }
+            { text: "Button", link: "/components/button/index" },
+            { text: "Input", link: "/components/input/index" }
           ]
         }
       ]
+    }
+  },
+  vite: {
+    plugins: [mdDemoTransform()],
+    resolve: {
+      alias: {
+        "@": path.join(__dirname, "../../src"),
+        "~": path.join(__dirname, "../../packages")
+      }
     }
   }
 });
