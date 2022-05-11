@@ -1,3 +1,13 @@
+# [0.1.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.0.1...v0.1.0) (2022-05-11)
+
+
+### Bug Fixes
+
+* remove script `build:globals` ([8d018fa](https://github.com/SoulLyoko/vite-lib-starter/commit/8d018fa8e84267202ea41d2cf585d5a1588d1a7a))
+* script `release` ([66fbfec](https://github.com/SoulLyoko/vite-lib-starter/commit/66fbfec427b4f6e96aa74452b7d8df1fd03d3bab))
+
+
+
 ## 0.0.1 (2022-05-11)
 
 
