@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.1.0...v0.2.0) (2022-05-11)
+
+
+### Bug Fixes
+
+* script `changelog` ([eea565e](https://github.com/SoulLyoko/vite-lib-starter/commit/eea565e6e19e13643a7f1f6545b93a60a63bfa61))
+
+
+
 # [0.1.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.0.1...v0.1.0) (2022-05-11)
 
 
