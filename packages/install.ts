@@ -6,7 +6,7 @@ import components from "./components.all";
 export default {
   install(app: App, options: Config = {}) {
     useConfig(app, options);
-    components.forEach(component => {
+    Object.values(components).forEach(component => {
       app.component(component.name, component);
     });
   }

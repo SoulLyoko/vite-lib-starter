@@ -1,7 +1,7 @@
 declare module "vue" {
   export interface GlobalComponents {
-    VInput: typeof import("../packages")["VInput"];
-    VButton: typeof import("../packages")["VButton"];
+    VInput: typeof import("vite-lib-starter")["VInput"];
+    VButton: typeof import("vite-lib-starter")["VButton"];
   }
 }
 

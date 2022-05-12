@@ -1,3 +1,6 @@
 import { VButton, VInput } from "./components";
 
-export default [VButton, VInput];
+export default {
+  VButton,
+  VInput
+};
