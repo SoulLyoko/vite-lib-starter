@@ -7,8 +7,7 @@ const useMatcher = (flags?: string) => new RegExp(MATCHER, flags);
 function parseComponent(match: string, id: string) {
   const [m, componentPath] = match.match(useMatcher()) ?? [];
   const componentName = path.basename(componentPath);
-  let sourcePath = path.join(id.substring(0, id.lastIndexOf("/")), componentPath);
-  sourcePath = sourcePath.substring(sourcePath.indexOf("\\docs")).replace("\\docs", "@").replace(/\\/g, "/");
+  const sourcePath = path.join(id.substring(0, id.lastIndexOf("/")), componentPath);
   return { componentPath, componentName, sourcePath };
 }
 
