@@ -1,1 +1,0 @@
-import{_ as a,c as t,d as o,a as r,r as n,o as s}from"./app.4800504f.js";const x='{"title":"","description":"","frontmatter":{"sidebar":false},"headers":[],"relativePath":"index.md"}',c={};function d(p,_,i,l,m,f){const e=n("markdown");return s(),t("div",null,[o("p",null,[r(e,{path:"/../README.md"})])])}var h=a(c,[["render",d]]);export{x as __pageData,h as default};
