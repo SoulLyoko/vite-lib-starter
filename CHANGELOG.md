@@ -1,3 +1,13 @@
+## [0.3.1](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.3.0...v0.3.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* components.all ([db68a61](https://github.com/SoulLyoko/vite-lib-starter/commit/db68a6141f0a0033e90bad5f00e7ac145cbe2b30))
+* sourcePath in  md-demo-transform plugin ([e98876d](https://github.com/SoulLyoko/vite-lib-starter/commit/e98876d146c9eafd1e7514a61043fd296f1b563d))
+
+
+
 # [0.3.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.2.0...v0.3.0) (2022-05-11)
 
 
