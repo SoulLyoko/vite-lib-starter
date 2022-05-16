@@ -13,12 +13,11 @@ function parseComponent(match: string, id: string) {
 
 /**
  * Use in .md:
- *
+ *```md
  * ::: demo
- *
  * ./basic
- *
  * :::
+ * ```
  */
 export function mdDemoTransform(): Plugin {
   return {
