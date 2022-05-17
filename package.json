@@ -14,6 +14,13 @@
   "main": "lib/index.umd.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
+  "style": "lib/style.css",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js"
+    }
+  },
   "keywords": [
     "vite",
     "lib",
@@ -22,8 +29,9 @@
   "scripts": {
     "dev": "yarn switch:3 && vite",
     "dev:2": "yarn switch:2 && vite",
-    "build": "yarn switch:3 && vite build && yarn build:types",
+    "build": "yarn switch:3 && vite build && yarn build:types && yarn build:global",
     "build:types": "vue-tsc --project tsconfig.d.json --declaration --emitDeclarationOnly --outDir lib",
+    "build:global": "esno scripts/global.ts",
     "serve": "yarn switch:3 && vite preview",
     "docs:dev": "yarn switch:3 && vitepress dev packages",
     "docs:build": "yarn switch:3 && vitepress build packages",
