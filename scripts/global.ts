@@ -1,11 +1,12 @@
 import fs from "fs";
+import pkg from "../package.json";
 
 const componetsFile = fs.readFileSync("packages/components.all.ts", "utf-8");
 const matchExport = componetsFile.match(/export default {\s*(.*\s*)*}/)?.[0];
 const matchComponents = matchExport?.replace(/(export default {)|}|\s/g, "");
 const components = matchComponents?.split(",");
 
-const useComponentsTemplate = (name: string) => `${name}: typeof import("vite-lib-starter")["${name}"];`;
+const useComponentsTemplate = (name: string) => `${name}: typeof import("${pkg.name}")["${name}"];`;
 const useGlobalTemplate = (componentsTemplate: string) => `declare module "vue" {
   export interface GlobalComponents {
     ${componentsTemplate}

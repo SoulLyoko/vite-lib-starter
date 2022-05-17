@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import path from "path";
 import { mdDemoTransform } from "./plugins/md-demo-transform";
+import pkg from "../../package.json";
 
 const Guide = [
   { text: "Start", link: "/guide/start" },
@@ -17,10 +18,10 @@ const Components = [
 ];
 
 export default defineConfig({
-  base: "/vite-lib-starter/",
+  base: `/${pkg.name}/`,
   lang: "zh-CN",
-  title: "vite-lib-starter",
-  description: "vite-lib-starter",
+  title: pkg.upperName,
+  description: pkg.description,
   themeConfig: {
     docsDir: "packages",
     repo: "SoulLyoko/vite-lib-starter",
@@ -39,7 +40,7 @@ export default defineConfig({
       alias: {
         "@": path.join(__dirname, "../../src"),
         "~": path.join(__dirname, "../../packages"),
-        "vite-lib-starter": path.resolve(__dirname, "../../packages")
+        [pkg.name]: path.resolve(__dirname, "../../packages")
       }
     }
   }

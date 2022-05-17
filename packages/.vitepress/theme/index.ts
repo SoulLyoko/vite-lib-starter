@@ -1,7 +1,7 @@
 import type { App } from "vue-demi";
 import type { Theme } from "vitepress";
 import defaultTheme from "vitepress/theme";
-import ViteLibStarter from "vite-lib-starter";
+import ViteLibStarter from "../..";
 import components from "../components";
 
 export default {

@@ -36,14 +36,14 @@
 
 ## Development
 
-Install and run
+### Install and run
 
 ```bash
 yarn
 yarn dev
 ```
 
-Other commands
+### Other commands
 
 ```bash
 yarn dev # dev on vue3

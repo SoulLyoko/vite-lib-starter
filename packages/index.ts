@@ -1,5 +1,3 @@
-import { default as install } from "./install";
-
-export default install;
+export { default } from "./install";
 
 export * from "./components";
