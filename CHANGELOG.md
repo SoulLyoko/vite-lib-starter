@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.3.2...v0.4.0) (2022-05-18)
+
+
+### Bug Fixes
+
+* build global.d.ts ([5635160](https://github.com/SoulLyoko/vite-lib-starter/commit/5635160f41ee8efb445289b6d7ffe372ec88624c))
+
+
+
 ## [0.3.2](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.3.1...v0.3.2) (2022-05-12)
 
 
