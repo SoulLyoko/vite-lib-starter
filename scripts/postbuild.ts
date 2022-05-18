@@ -1,4 +1,4 @@
-import gulp from "gulp";
+import { series, src, dest } from "gulp";
 import autoprefixer from "gulp-autoprefixer";
 import cleancss from "gulp-clean-css";
 import gulpSass from "gulp-sass";
@@ -12,7 +12,6 @@ function buildTypes() {
   execSync(run("lib"));
 }
 function buildStyles() {
-  const { series, src, dest } = gulp;
   const common = () => src("packages/**/*.scss").pipe(gulpSass(sass).sync()).pipe(autoprefixer()).pipe(cleancss());
   const task1 = () => common().pipe(dest("es"));
   const task2 = () => common().pipe(dest("lib"));
