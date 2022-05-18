@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.4.0...v0.4.1) (2022-05-18)
+
+
+### Bug Fixes
+
+* publish dist ([623ac9b](https://github.com/SoulLyoko/vite-lib-starter/commit/623ac9b5231b8cc61bf6d59ed7f85d7e29157b9f))
+
+
+
 # [0.4.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.3.2...v0.4.0) (2022-05-18)
 
 
