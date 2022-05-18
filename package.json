@@ -8,32 +8,33 @@
   "homepage": "https://github.com/SoulLyoko/vite-lib-starter#readme",
   "private": false,
   "license": "MIT",
+  "keywords": [
+    "vite",
+    "lib",
+    "starter"
+  ],
   "files": [
     "es",
     "lib",
     "global.d.ts"
   ],
   "main": "lib/index.js",
-  "style": "lib/style.css",
   "module": "es/index.js",
   "types": "es/index.d.ts",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "style": "dist/index.css",
   "exports": {
     ".": {
-      "import": "./lib/index.es.js",
-      "require": "./lib/index.umd.js"
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
     }
   },
-  "keywords": [
-    "vite",
-    "lib",
-    "starter"
-  ],
   "scripts": {
     "dev": "yarn switch:3 && vite",
     "dev:2": "yarn switch:2 && vite",
-    "build": "yarn switch:3 && vite build && yarn build:types && yarn build:global",
-    "build:types": "vue-tsc --project tsconfig.d.json --declaration --emitDeclarationOnly --outDir es",
-    "build:global": "esno scripts/global.ts",
+    "build": "yarn switch:3 && yarn typecheck && vite build",
+    "postbuild": "esno scripts/postbuild.ts",
     "serve": "yarn switch:3 && vite preview",
     "docs:dev": "yarn switch:3 && vitepress dev packages",
     "docs:build": "yarn switch:3 && vitepress build packages",
@@ -68,6 +69,7 @@
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@types/fs-extra": "^9.0.13",
+    "@types/gulp": "^4.0.9",
     "@types/node": "^17.0.33",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
@@ -85,10 +87,15 @@
     "eslint-plugin-vue": "^8.7.1",
     "esno": "^0.15.0",
     "fs-extra": "^10.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
     "husky": "^8.0.1",
     "jsdom": "^19.0.0",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
+    "sass": "^1.51.0",
     "typescript": "^4.6.4",
     "vite": "^2.9.8",
     "vite-plugin-vue2": "^2.0.0",

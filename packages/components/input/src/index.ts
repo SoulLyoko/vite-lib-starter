@@ -2,7 +2,6 @@ import { computed, defineComponent, type PropType } from "vue-demi";
 import type { Config } from "~/types";
 import { useSize } from "~/composables";
 import { h } from "~/utils";
-import "./index.css";
 
 export const inputProps = {
   value: { type: String },

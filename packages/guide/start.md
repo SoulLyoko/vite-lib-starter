@@ -34,7 +34,7 @@ app.use(LibStarter);
 app.mount("#app");
 ```
 
-#### Type Support
+#### Volar Support
 
 Add the global component type definition for `Volar`
 
@@ -56,5 +56,6 @@ Add the global component type definition for `Volar`
 </template>
 <script setup>
   import { VButton } from "vite-lib-starter";
+  import "vite-lib-starter/lib/styles/button.css";
 </script>
 ```

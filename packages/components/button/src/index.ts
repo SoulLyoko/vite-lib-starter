@@ -2,7 +2,6 @@ import { defineComponent, computed, type PropType } from "vue-demi";
 import type { Config } from "~/types";
 import { useSize } from "~/composables";
 import { h, slot } from "~/utils";
-import "./index.css";
 
 export type ButtonType = "default" | "primary" | "success";
 

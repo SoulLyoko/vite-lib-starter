@@ -37,17 +37,14 @@ export default defineConfig(async ({ mode }) => {
         entry: path.resolve(__dirname, "packages/index.ts"),
         name: pkg.upperName
       },
-      outDir: "lib",
       rollupOptions: {
         external,
         output: [
           {
-            exports: "named",
-            preserveModules: true,
-            preserveModulesRoot: path.resolve(__dirname, "lib"),
+            globals,
             entryFileNames: "[name].js",
-            format: "cjs",
-            dir: "lib"
+            format: "umd",
+            dir: "dist"
           },
           {
             preserveModules: true,
@@ -55,6 +52,14 @@ export default defineConfig(async ({ mode }) => {
             entryFileNames: "[name].js",
             format: "es",
             dir: "es"
+          },
+          {
+            exports: "named",
+            preserveModules: true,
+            preserveModulesRoot: path.resolve(__dirname, "lib"),
+            entryFileNames: "[name].js",
+            format: "cjs",
+            dir: "lib"
           }
         ]
       }
