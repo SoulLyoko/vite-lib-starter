@@ -24,27 +24,14 @@ yarn add vite-lib-starter
 ```ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import LibStarter from "vite-lib-starter";
+import ViteLibStarter from "vite-lib-starter";
 import "vite-lib-starter/lib/style.css";
 
 const app = createApp(App);
-app.use(LibStarter);
+app.use(ViteLibStarter);
 // global config
-// app.use(LibStarter, { size: "small" });
+// app.use(ViteLibStarter, { size: "small" });
 app.mount("#app");
-```
-
-#### Volar Support
-
-Add the global component type definition for `Volar`
-
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    "types": ["vite-lib-starter/global"]
-  }
-}
 ```
 
 ### Manually import
@@ -56,6 +43,54 @@ Add the global component type definition for `Volar`
 </template>
 <script setup>
   import { VButton } from "vite-lib-starter";
-  import "vite-lib-starter/lib/styles/button.css";
+  import "vite-lib-starter/es/styles/button.css";
 </script>
+```
+
+### On-demand Import
+
+Use unplugin-vue-components to auto import
+
+```bash
+yarn add -D unplugin-vue-components
+```
+
+```ts
+//vite.config.ts
+import Components from "unplugin-vue-components/vite";
+import { kebabCase } from "unplugin-vue-components";
+
+const LibResolver = componentName => {
+  if (componentName.startsWith("V")) {
+    const partialName = kebabCase(componentName.slice(1));
+    return {
+      name: componentName,
+      from: "vite-lib-starter",
+      sideEffects: `vite-lib-starter/es/styles/${partialName}.css`
+    };
+  }
+};
+
+export default {
+  plugins: [
+    // ...
+    Components({
+      resolvers: [LibResolver]
+    })
+  ]
+};
+```
+
+### Volar Support
+
+Add the global component type definition for `Volar`
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    // ...
+    "types": ["vite-lib-starter/global"]
+  }
+}
 ```
