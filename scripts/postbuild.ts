@@ -7,11 +7,13 @@ import fs from "fs";
 import { execSync } from "child_process";
 
 function buildTypes() {
+  console.log("Building types...");
   const run = outDir => `vue-tsc --project tsconfig.d.json --declaration --emitDeclarationOnly --outDir ${outDir}`;
   execSync(run("es"));
   execSync(run("lib"));
 }
 function buildStyles() {
+  console.log("Building styles...");
   const common = () => src("packages/**/*.scss").pipe(gulpSass(sass).sync()).pipe(autoprefixer()).pipe(cleancss());
   const task1 = () => common().pipe(dest("es"));
   const task2 = () => common().pipe(dest("lib"));
