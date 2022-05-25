@@ -54,8 +54,8 @@ yarn test:2 # test on vue2 without watch
 yarn test:3 # test on vue3 without watch
 yarn test:all # test both of vue2 and vue3 without watch
 yarn test:coverage # use c8 for coverage
-yarn switch:2 # switch packeges and vue-demi to vue2
-yarn switch:3 # switch packeges and vue-demi to vue3
+yarn switch:2 # switch packages and vue-demi to vue2
+yarn switch:3 # switch packages and vue-demi to vue3
 yarn release # release by choicing a version
 yarn typecheck # run vue-tsc with noEmit
 yarn changelog # generate changelog
@@ -68,7 +68,7 @@ Examples: see `packages/components`
 
 Do not use SFC(.vue) files, just use the function `h()` (encapsulated by h-demi) in `.ts` files, no jsx of course.
 
-Don't forget to add `value`,`modelValue` and `input`,`update:modelValue` to props and emits options at the same time
+Don't forget to add `value,modelValue` to props options and add `input,update:modelValue` to emits options at the same time
 
 ## Build
 
