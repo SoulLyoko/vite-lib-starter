@@ -1,7 +1,9 @@
+import path from "path";
+
 import { defineConfig } from "vite";
 import { isVue2 } from "vue-demi";
-import path from "path";
 import fs from "fs-extra";
+
 import pkg from "./package.json";
 
 // https://vitejs.dev/config/e

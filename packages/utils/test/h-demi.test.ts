@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { isVue2 } from "vue-demi";
+
 import { adaptOnsV3, h, slot } from "../h-demi";
 
 describe("h-demi", () => {

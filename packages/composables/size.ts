@@ -1,5 +1,7 @@
-import { computed } from "vue-demi";
 import type { Config } from "~/types";
+
+import { computed } from "vue-demi";
+
 import { useConfig, useProp } from ".";
 
 export function useSize() {

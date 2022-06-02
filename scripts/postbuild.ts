@@ -1,10 +1,11 @@
+import fs from "fs";
+import { execSync } from "child_process";
+
 import { series, src, dest } from "gulp";
 import autoprefixer from "gulp-autoprefixer";
 import cleancss from "gulp-clean-css";
 import gulpSass from "gulp-sass";
 import sass from "sass";
-import fs from "fs";
-import { execSync } from "child_process";
 
 function buildTypes() {
   console.log("Building types...");

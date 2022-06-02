@@ -1,5 +1,7 @@
-import { isVue2, getCurrentInstance } from "vue-demi";
 import type { Config } from "~/types";
+
+import { isVue2, getCurrentInstance } from "vue-demi";
+
 import { CONFIG_KEY, CONFIG_DEFAULT } from "~/constants";
 
 export function useConfig(app?: any, config?: Config): Config {

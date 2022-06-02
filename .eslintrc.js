@@ -14,6 +14,8 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:vue/vue3-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
@@ -31,6 +33,14 @@ module.exports = {
     "vue/require-render-return": 0,
     "vue/require-explicit-emits": 0,
     "vue/require-default-prop": 0,
-    "vue/multi-word-component-names": 0
+    "vue/multi-word-component-names": 0,
+    "import/no-unresolved": 0,
+    "import/order": [
+      "warn",
+      {
+        groups: ["type", "builtin", "external"],
+        "newlines-between": "always"
+      }
+    ]
   }
 };

@@ -1,5 +1,8 @@
-import { defineComponent, computed, type PropType } from "vue-demi";
+import type { PropType } from "vue-demi";
 import type { Config } from "~/types";
+
+import { defineComponent, computed } from "vue-demi";
+
 import { useSize } from "~/composables";
 import { h, slot } from "~/utils";
 

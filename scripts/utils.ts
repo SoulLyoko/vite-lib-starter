@@ -1,4 +1,5 @@
 import { execSync } from "child_process";
+
 import packageJson from "../package.json";
 
 export function getVueVersion() {

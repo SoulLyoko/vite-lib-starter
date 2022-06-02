@@ -1,5 +1,6 @@
 import fs from "fs";
 import { execSync } from "child_process";
+
 import { prompt } from "enquirer";
 
 async function main() {

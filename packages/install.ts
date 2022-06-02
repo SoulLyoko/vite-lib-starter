@@ -1,5 +1,6 @@
 import type { App, Plugin, Component } from "vue-demi";
 import type { Config } from "./types";
+
 import { useConfig } from "./composables";
 import * as components from "./components";
 

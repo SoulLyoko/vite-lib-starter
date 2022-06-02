@@ -1,7 +1,9 @@
+import type { Config } from "~/types";
+
 import { mount } from "@vue/test-utils";
 import { isVue2, Vue2 } from "vue-demi";
+
 import { CONFIG_DEFAULT, CONFIG_KEY } from "~/constants";
-import type { Config } from "~/types";
 import { useConfig } from "../config";
 
 describe("useConfig", () => {
