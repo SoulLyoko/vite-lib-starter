@@ -19,7 +19,7 @@ function parseComponent(match: string, id: string) {
  * :::
  * ```
  */
-export function mdDemoTransform(): Plugin {
+export function mdDemoTransform() {
   return {
     name: "md-demo-transform",
     enforce: "pre",
@@ -47,5 +47,5 @@ export function mdDemoTransform(): Plugin {
 
       return code;
     }
-  };
+  } as Plugin;
 }

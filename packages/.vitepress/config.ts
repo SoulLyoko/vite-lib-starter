@@ -35,7 +35,7 @@ export default defineConfig({
     }
   },
   vite: {
-    plugins: [mdDemoTransform()],
+    plugins: [mdDemoTransform() as any],
     resolve: {
       alias: {
         "@": path.join(__dirname, "../../src"),
