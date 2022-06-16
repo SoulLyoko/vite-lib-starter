@@ -1,10 +1,15 @@
 import type { PropType } from "vue-demi";
-import type { Config } from "~/types";
+import type { Config, PropTypes, EmitFn } from "~/types";
 
 import { computed, defineComponent } from "vue-demi";
 
 import { useSize } from "~/composables";
 import { h } from "~/utils";
+
+export type InputProps = PropTypes<typeof inputProps>;
+export type InputEmits = typeof inputEmits;
+export type InputEmitFn = EmitFn<InputEmits>;
+export type InputInstance = InstanceType<typeof VInput>;
 
 export const inputProps = {
   value: { type: String },
@@ -19,8 +24,6 @@ export const inputEmits = {
   input: (e: string) => typeof e === "string",
   "update:modelValue": (e: string) => typeof e === "string"
 };
-
-export type InputInstance = InstanceType<typeof VInput>;
 
 export const VInput = defineComponent({
   name: "VInput",

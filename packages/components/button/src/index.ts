@@ -1,5 +1,5 @@
 import type { PropType } from "vue-demi";
-import type { Config } from "~/types";
+import type { Config, PropTypes, EmitFn } from "~/types";
 
 import { defineComponent, computed } from "vue-demi";
 
@@ -7,6 +7,10 @@ import { useSize } from "~/composables";
 import { h, slot } from "~/utils";
 
 export type ButtonType = "default" | "primary" | "success";
+export type ButtonProps = PropTypes<typeof buttonProps>;
+export type ButtonEmits = typeof buttonEmits;
+export type ButtonEmitFn = EmitFn<ButtonEmits>;
+export type ButtonInstance = InstanceType<typeof VButton>;
 
 export const buttonProps = {
   type: { type: String as PropType<ButtonType> },
@@ -16,8 +20,6 @@ export const buttonProps = {
 export const buttonEmits = {
   click: (e: MouseEvent) => e instanceof MouseEvent
 };
-
-export type ButtonInstance = InstanceType<typeof VButton>;
 
 export const VButton = defineComponent({
   name: "VButton",
