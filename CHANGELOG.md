@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.4.1...v0.4.2) (2022-06-16)
+
+
+### Bug Fixes
+
+* components exports ([8f09ad4](https://github.com/SoulLyoko/vite-lib-starter/commit/8f09ad481706c4755fb005f2e28f0bade99ca99d))
+
+
+
 ## [0.4.1](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.4.0...v0.4.1) (2022-05-18)
 
 
