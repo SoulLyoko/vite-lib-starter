@@ -26,7 +26,9 @@
 # Try it
 
 - Use this template
-- Global rename `vite-lib-starter` and `ViteLibStarter` to your own library name.
+- Clear `CHANGELOG.md`
+- Replace author name in LICENSE file
+- Global replace `vite-lib-starter` and `ViteLibStarter` to your own library name
 - Generate your github personal access token on https://github.com/settings/tokens (skip if you already have)
 - Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/deploy.yml#L21` to your repo `Setting>Secrets>Actions`
 - Generate your npm access token (skip if you already have)
@@ -68,7 +70,7 @@ Examples: see `packages/components`
 
 Do not use SFC(.vue) files, just use the function `h()` (encapsulated by h-demi) in `.ts` files, no jsx of course.
 
-Don't forget to add `value,modelValue` to props options and add `input,update:modelValue` to emits options at the same time
+Don't forget to add `value,modelValue` to props options and add `input,update:modelValue` to emits options at the same time.
 
 ## Build
 
