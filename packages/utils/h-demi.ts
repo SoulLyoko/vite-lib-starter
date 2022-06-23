@@ -1,4 +1,6 @@
-import { h as _h, isVue2, type VNode as _VNode } from "vue-demi";
+import type { VNode as _VNode } from "vue-demi";
+
+import { h as _h, isVue2 } from "vue-demi";
 
 interface Options {
   attrs?: Object;
