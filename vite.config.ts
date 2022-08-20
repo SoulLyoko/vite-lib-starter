@@ -9,7 +9,7 @@ import pkg from "./package.json";
 // https://vitejs.dev/config/e
 export default defineConfig(async ({ mode }) => {
   const vuePlugin = isVue2
-    ? (await import("vite-plugin-vue2")).createVuePlugin()
+    ? (await import("@vitejs/plugin-vue2")).default()
     : (await import("@vitejs/plugin-vue")).default();
   const globals = { vue: "Vue", "vue-demi": "VueDemi" };
   const external = Object.keys(globals);

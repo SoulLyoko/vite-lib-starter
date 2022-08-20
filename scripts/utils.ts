@@ -10,7 +10,7 @@ export function getVueVersion() {
 
 export function switch2() {
   if (getVueVersion() != "2") {
-    execSync("yarn add vue@2.6.14 -D");
+    execSync("yarn add vue@^2.7.9 -D");
     execSync("yarn add @vue/test-utils@1.3.0 -D");
     execSync("vue-demi-switch 2");
   }

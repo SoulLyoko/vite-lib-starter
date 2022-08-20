@@ -18,6 +18,6 @@ const packagesMds = import.meta.glob("/**/*.md");
 const mds = { ...rootMds, ...packagesMds };
 const is = computed(() => {
   const component = mds[props.path || ""]?.();
-  return component && defineAsyncComponent(() => component);
+  return component && defineAsyncComponent(() => component as any);
 });
 </script>

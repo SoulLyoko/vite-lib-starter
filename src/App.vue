@@ -13,33 +13,21 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue-demi";
+<script lang="ts" setup>
+import { ref } from "vue";
 
-export default defineComponent({
-  name: "App",
-  setup() {
-    const inputValue = ref("");
-    const userName = ref("");
+const inputValue = ref("");
+const userName = ref("");
 
-    function onConfirm() {
-      if (!inputValue.value) {
-        return alert("Please enter your name");
-      }
-      userName.value = inputValue.value;
-    }
-    function onBack() {
-      userName.value = "";
-    }
-
-    return {
-      inputValue,
-      userName,
-      onConfirm,
-      onBack
-    };
+function onConfirm() {
+  if (!inputValue.value) {
+    return alert("Please enter your name");
   }
-});
+  userName.value = inputValue.value;
+}
+function onBack() {
+  userName.value = "";
+}
 </script>
 
 <style>
