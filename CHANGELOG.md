@@ -1,3 +1,14 @@
+# [0.5.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.4.1...v0.5.0) (2022-08-21)
+
+
+### Bug Fixes
+
+* build types ([9a10a32](https://github.com/SoulLyoko/vite-lib-starter/commit/9a10a32bced460c9f8912422a40c22cff7de12bd))
+* components exports ([8f09ad4](https://github.com/SoulLyoko/vite-lib-starter/commit/8f09ad481706c4755fb005f2e28f0bade99ca99d))
+* vue 2.7 compatible ([d5c242d](https://github.com/SoulLyoko/vite-lib-starter/commit/d5c242dffa0952721e29586fc37753708675d372))
+
+
+
 ## [0.4.2](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.4.1...v0.4.2) (2022-06-16)
 
 
