@@ -1,4 +1,6 @@
-import { switch2, switch3 } from "./utils";
+import type { VueVersion } from "./utils";
 
-const version = process.argv[2];
-version == "2" ? switch2() : switch3();
+import { switchVueVersion } from "./utils";
+
+const version = process.argv[2] as VueVersion;
+switchVueVersion(version);

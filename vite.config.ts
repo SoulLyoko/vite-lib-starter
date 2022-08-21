@@ -1,16 +1,19 @@
 import path from "path";
 
 import { defineConfig } from "vite";
-import { isVue2 } from "vue-demi";
 import fs from "fs-extra";
 
 import pkg from "./package.json";
+import { getVueVersion } from "./scripts/utils";
 
 // https://vitejs.dev/config/e
 export default defineConfig(async ({ mode }) => {
-  const vuePlugin = isVue2
-    ? (await import("@vitejs/plugin-vue2")).default()
-    : (await import("@vitejs/plugin-vue")).default();
+  const vuePluginMap = {
+    2: async () => (await import("vite-plugin-vue2")).createVuePlugin(),
+    2.7: async () => (await import("@vitejs/plugin-vue2")).default(),
+    3: async () => (await import("@vitejs/plugin-vue")).default()
+  };
+  const vuePlugin = await vuePluginMap[getVueVersion()]();
   const globals = { vue: "Vue", "vue-demi": "VueDemi" };
   const external = Object.keys(globals);
   if (mode === "production") {
