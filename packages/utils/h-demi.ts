@@ -1,5 +1,6 @@
 import type { VNode as _VNode } from "vue-demi";
 
+import * as VueDemi from "vue-demi";
 import { h as _h, isVue2 } from "vue-demi";
 
 interface Options {
@@ -43,3 +44,11 @@ export const slot = (s: any, attrs?: any) => {
   if (typeof s == "function") return s(attrs);
   return s;
 };
+
+export function dynamicComponent(name: string) {
+  if (isVue2) {
+    return name;
+  } else {
+    return VueDemi.resolveDynamicComponent?.(name);
+  }
+}
