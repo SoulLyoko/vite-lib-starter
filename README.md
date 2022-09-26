@@ -30,9 +30,9 @@
 - Replace author name in LICENSE file
 - Global replace `vite-lib-starter` and `ViteLibStarter` to your own library name
 - Generate your github personal access token on https://github.com/settings/tokens (skip if you already have)
-- Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/deploy.yml#L21` to your repo `Setting>Secrets>Actions`
+- Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/deploy.yml#L21`) to your repo `Setting>Secrets>Actions`
 - Generate your npm access token (skip if you already have)
-- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/publish.yml#L21` to your repo `Setting>Secrets>Actions`
+- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/publish.yml#L21`) to your repo `Setting>Secrets>Actions`
 
 # Usage
 
