@@ -1,3 +1,13 @@
+# [0.6.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.5.1...v0.6.0) (2022-12-09)
+
+
+### Bug Fixes
+
+* update build scripts, release scripts ([a3225d1](https://github.com/SoulLyoko/vite-lib-starter/commit/a3225d16a63cd1b5fa8c887b42387e48ede913ea))
+* upgrage vite to 3.x, vitepress to 1.x ([235ad0f](https://github.com/SoulLyoko/vite-lib-starter/commit/235ad0fbb1b92e5b583f81b6c8d18118d7c6dee8))
+
+
+
 ## [0.5.1](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.4.2...v0.5.1) (2022-08-22)
 
 
