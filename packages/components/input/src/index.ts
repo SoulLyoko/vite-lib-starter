@@ -12,12 +12,12 @@ export type InputEmitFn = EmitFn<InputEmits>;
 export type InputInstance = InstanceType<typeof VInput>;
 
 export const inputProps = {
-  value: { type: String },
+  value: { type: [String, Number] },
   modelValue: { type: String },
   type: { type: String },
   size: { type: String as PropType<Config["size"]> },
   placeholder: { type: String },
-  rows: { type: [String, Number] }
+  rows: { type: Number }
 };
 
 export const inputEmits = {

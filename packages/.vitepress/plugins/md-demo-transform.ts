@@ -6,7 +6,7 @@ const useMatcher = (flags?: string) => new RegExp(MATCHER, flags);
 
 function parseComponent(match: string, id: string) {
   const [m, componentPath] = match.match(useMatcher()) ?? [];
-  const componentName = path.basename(componentPath);
+  const componentName = "demo" + path.basename(componentPath);
   const sourcePath = path.join(id.substring(0, id.lastIndexOf("/")), componentPath);
   return { componentPath, componentName, sourcePath };
 }
