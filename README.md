@@ -2,7 +2,7 @@
 <h3>ViteLibStarter</h3>
 <span>A template for building Vue components library</span> 
 <br>
-<a  href="https://soullyoko.github.io/vite-lib-starter/">Docs</a>
+<a href="https://soullyoko.github.io/vite-lib-starter/">Docs</a>
 </div>
 
 # Directory
@@ -32,7 +32,7 @@
 - Generate your github personal access token on https://github.com/settings/tokens (skip if you already have)
 - Add your github personal access token named `ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/deploy.yml#L21`) to your repo `Setting>Secrets>Actions`
 - Generate your npm access token (skip if you already have)
-- Add your npm access token named `NPM_ACCESS_TOKEN` (or any other name, it corresponds to `.github/workflows/publish.yml#L21`) to your repo `Setting>Secrets>Actions`
+- Add your npm access token named `NPM_TOKEN` (or any other name, it corresponds to `.github/workflows/publish.yml#L21`) to your repo `Setting>Secrets>Actions`
 
 # Usage
 

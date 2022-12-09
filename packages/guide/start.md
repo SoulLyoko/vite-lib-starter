@@ -2,15 +2,13 @@
 <h3>ViteLibStarter</h3>
 <span>A template for building Vue components library</span> 
 <br>
-<a  href="https://soullyoko.github.io/vite-lib-starter/">Docs</a>
+<a href="https://soullyoko.github.io/vite-lib-starter/">Docs</a>
 </div>
 
 ## Install
 
 ```bash
 npm i vite-lib-starter
-# or
-yarn add vite-lib-starter
 ```
 
 ## Usage
@@ -48,7 +46,7 @@ app.mount("#app");
 Use unplugin-vue-components to auto import
 
 ```bash
-yarn add -D unplugin-vue-components
+npm i unplugin-vue-components -D
 ```
 
 ```ts

@@ -1,12 +1,15 @@
-import fs from "fs";
 import { execSync } from "child_process";
 
+import fs from "fs-extra";
 import { series, src, dest } from "gulp";
 import autoprefixer from "gulp-autoprefixer";
 import cleancss from "gulp-clean-css";
 import gulpSass from "gulp-sass";
 import sass from "sass";
 
+function buildPackages() {
+  execSync("vite build");
+}
 function buildTypes() {
   console.log("Building types...");
   const run = outDir =>
@@ -28,6 +31,7 @@ function buildGlobal() {
   execSync("yarn build:global");
 }
 
+buildPackages();
 buildTypes();
-buildStyles();
 buildGlobal();
+buildStyles();

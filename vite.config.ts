@@ -12,7 +12,10 @@ export const alias = {
   [pkg.name]: path.resolve(__dirname, "packages")
 };
 
-// https://vitejs.dev/config/e
+const globals = { vue: "Vue", "vue-demi": "VueDemi" };
+const external = Object.keys(globals);
+
+// https://vitejs.dev/config/
 export default defineConfig(async ({ mode }) => {
   const vuePluginMap = {
     2: async () => (await import("vite-plugin-vue2")).createVuePlugin(),
@@ -20,8 +23,6 @@ export default defineConfig(async ({ mode }) => {
     3: async () => (await import("@vitejs/plugin-vue")).default()
   };
   const vuePlugin = await vuePluginMap[getVueVersion()]();
-  const globals = { vue: "Vue", "vue-demi": "VueDemi" };
-  const external = Object.keys(globals);
   if (mode === "production") {
     fs.removeSync("dist");
     fs.removeSync("es");

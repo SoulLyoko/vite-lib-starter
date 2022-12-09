@@ -28,11 +28,11 @@ describe("VInput", () => {
   });
   it("rows", async () => {
     const wrapper = mount(VInput, {
-      attrs: { type: "textarea", rows: "1" }
+      attrs: { type: "textarea", rows: 1 }
     });
     const elm = wrapper.element as HTMLTextAreaElement;
     expect(elm.rows).toBe(1);
-    await wrapper.setProps({ rows: "2" });
+    await wrapper.setProps({ rows: 2 });
     expect(elm.rows).toBe(2);
   });
 
