@@ -15,5 +15,5 @@
 ## Textarea
 
 ::: demo
-./textarea
+./itextarea
 :::

@@ -19,7 +19,7 @@ function parseComponent(match: string, id: string) {
  * :::
  * ```
  */
-export function mdDemoTransform() {
+export function mdDemoTransform(): Plugin {
   return {
     name: "md-demo-transform",
     enforce: "pre",
@@ -37,15 +37,20 @@ export function mdDemoTransform() {
       code = importScripts ? `<script setup>\n${importScripts}\n</script>\n\n` + code : code;
       demoMatches?.forEach(match => {
         const { componentName, sourcePath } = parseComponent(match, id);
-        const demoTemplate = `<${componentName}></${componentName}>
-        
-<code-details>
+        const demoTemplate = `<demo>
+<template #demo>
+<${componentName}></${componentName}>
+</template>
+<template #code>
+
 <<< ${sourcePath}.vue
-</code-details>`;
+
+</template>
+</demo>`;
         code = code.replace(match, demoTemplate);
       });
 
       return code;
     }
-  } as Plugin;
+  };
 }

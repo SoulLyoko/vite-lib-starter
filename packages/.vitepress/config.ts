@@ -1,16 +1,22 @@
 import { defineConfig } from "vitepress";
-import path from "path";
 import { mdDemoTransform } from "./plugins/md-demo-transform";
 import pkg from "../../package.json";
+import { alias } from "../../vite.config";
 
 const Guide = [
-  { text: "Start", link: "/guide/start" },
-  { text: "Changelog", link: "/guide/changelog" }
+  {
+    text: "Guide",
+    items: [
+      { text: "Start", link: "/guide/start" },
+      { text: "Changelog", link: "/guide/changelog" }
+    ]
+  }
 ];
+
 const Components = [
   {
     text: "Components",
-    children: [
+    items: [
       { text: "Button", link: "/components/button/demo/index" },
       { text: "Input", link: "/components/input/demo/index" }
     ]
@@ -19,15 +25,13 @@ const Components = [
 
 export default defineConfig({
   base: `/${pkg.name}/`,
-  lang: "zh-CN",
   title: pkg.upperName,
   description: pkg.description,
   themeConfig: {
-    docsDir: "packages",
-    repo: "SoulLyoko/vite-lib-starter",
+    socialLinks: [{ icon: "github", link: pkg.homepage }],
     nav: [
-      { text: "Guide", link: Guide[0].link },
-      { text: "Components", link: Components[0].children[0].link }
+      { text: "Guide", link: Guide[0].items[0].link },
+      { text: "Components", link: Components[0].items[0].link }
     ],
     sidebar: {
       "/guide": Guide,
@@ -35,13 +39,9 @@ export default defineConfig({
     }
   },
   vite: {
-    plugins: [mdDemoTransform() as any],
+    plugins: [mdDemoTransform()],
     resolve: {
-      alias: {
-        "@": path.join(__dirname, "../../src"),
-        "~": path.join(__dirname, "../../packages"),
-        [pkg.name]: path.resolve(__dirname, "../../packages")
-      }
+      alias
     }
   }
 });

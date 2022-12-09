@@ -1,7 +1,3 @@
----
-title: Start
----
-
 <div align="center">
 <h3>ViteLibStarter</h3>
 <span>A template for building Vue components library</span> 

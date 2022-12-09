@@ -6,6 +6,12 @@ import fs from "fs-extra";
 import pkg from "./package.json";
 import { getVueVersion } from "./scripts/utils";
 
+export const alias = {
+  "@": path.resolve(__dirname, "src"),
+  "~": path.resolve(__dirname, "packages"),
+  [pkg.name]: path.resolve(__dirname, "packages")
+};
+
 // https://vitejs.dev/config/e
 export default defineConfig(async ({ mode }) => {
   const vuePluginMap = {
@@ -24,11 +30,7 @@ export default defineConfig(async ({ mode }) => {
   return {
     plugins: [vuePlugin],
     resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "src"),
-        "~": path.resolve(__dirname, "packages"),
-        [pkg.name]: path.resolve(__dirname, "packages")
-      }
+      alias
     },
     test: {
       globals: true,

@@ -17,7 +17,7 @@ export const inputProps = {
   type: { type: String },
   size: { type: String as PropType<Config["size"]> },
   placeholder: { type: String },
-  rows: { type: [String, Number], default: 2 }
+  rows: { type: [String, Number] }
 };
 
 export const inputEmits = {
