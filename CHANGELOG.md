@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.6.0...v0.6.1) (2022-12-12)
+
+
+### Bug Fixes
+
+* upgrade to vite 4 ([86a13b6](https://github.com/SoulLyoko/vite-lib-starter/commit/86a13b648c3a4399d49b25836c87d30c508fd88a))
+
+
+
 # [0.6.0](https://github.com/SoulLyoko/vite-lib-starter/compare/v0.5.1...v0.6.0) (2022-12-09)
 
 
