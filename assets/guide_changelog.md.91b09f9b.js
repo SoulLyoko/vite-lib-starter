@@ -1,0 +1,1 @@
+import{_ as a,r as o,o as t,c as n,a as r}from"./app.63e13024.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/changelog.md"}'),c={name:"guide/changelog.md"};function s(d,p,m,_,l,i){const e=o("markdown");return t(),n("div",null,[r(e,{path:"../CHANGELOG.md"})])}const h=a(c,[["render",s]]);export{f as __pageData,h as default};
