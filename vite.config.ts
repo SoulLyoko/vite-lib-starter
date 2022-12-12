@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import fs from "fs-extra";
 
 import pkg from "./package.json";
-import { getVueVersion } from "./scripts/utils";
+import { getVueVersion } from "./scripts/switch";
 
 export const alias = {
   "@": path.resolve(__dirname, "src"),
@@ -50,6 +50,7 @@ export default defineConfig(async ({ mode }) => {
         output: [
           {
             globals,
+            name: pkg.upperName,
             entryFileNames: "[name].js",
             format: "umd",
             dir: "dist"
